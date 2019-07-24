@@ -12,7 +12,7 @@ class SumSquares(object):
       squares = []
 
       while i > 0:
-          temp_square -= self.process(i)
+          temp_square -= i**2
 
           if (temp_square > 0):
               squares.append(i)
@@ -20,19 +20,13 @@ class SumSquares(object):
               # print(temp_square)
               break
           else:
-              temp_square += self.process(i)
+              temp_square += i**2
               i -= 1
 
           i -= 1
 
       if (len(squares) > 0):
           print(squares)
-
-  def process(self, value):
-
-      if value > 0:
-          return value**2
-
 
 if __name__ == "__main__":
 
